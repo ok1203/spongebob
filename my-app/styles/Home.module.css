@@ -1,40 +1,130 @@
+.back{
+  
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+    /* The image used */
+    background-image: url("C:\Users\Omar\NFT-Collection2\my-app\public\1.webp");
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+    z-index: -1;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.show{
+  position: absolute;
+  top: 200px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 25px solid rgb(31, 134, 212);
+  -webkit-animation:spin 8s linear infinite;
+  -moz-animation:spin 8s linear infinite;
+  animation:spin 8s linear infinite;
+}
+.leftpos{
+  left:70px;
+}
+
+.rightpos{
+  right:70px;
+}
+.show > img{
+  position: absolute;
+  border-radius: 40px;
+  border: 10px solid rgb(8, 69, 110);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration:1.2s;
+}
+
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
 .main {
-  min-height: 90vh;
+  min-height: 70vh;
+  width: 50%;
+  margin-left: 50%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  transform: translateX(-50%);
+ border-radius: 1800px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
+  border: 20px solid rgb(79, 145, 3);
+  color: white;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  height: 98%;
+  width: 98%;
+  /* border-radius: 180px; */
+  display: flex;
+  border: 18px solid rgb(43, 215, 245);
+  color: white;
 }
 
 .footer {
   display: flex;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-}
-
-.image {
-  width: 70%;
-  height: 50%;
-  margin-left: 20%;
+  font-family: "Courier New", Courier, monospace;
+  border-top-left-radius: 800px;
+  border-top-right-radius: 800px; 
+  border-top: 20px solid rgb(26, 171, 203);
+  color: white;
 }
 
 .title {
   font-size: 2rem;
   margin: 2rem 0;
+  text-align: center;
 }
+
 
 .description {
   line-height: 1;
   margin: 2rem 0;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .button {
-  border-radius: 4px;
-  background-color: blue;
+  border-radius: 300px;
+  background-color: rgb(13, 169, 23);
   border: none;
   color: #ffffff;
   font-size: 15px;
@@ -42,6 +132,8 @@
   width: 200px;
   cursor: pointer;
   margin-bottom: 2%;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 @media (max-width: 1000px) {
   .main {
